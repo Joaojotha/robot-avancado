@@ -1,0 +1,56 @@
+
+
+*****For aninhado no robot*******
+
+Para fazer um for aninhado no robot, signfica oque? um FOR dentro de um outro FOR. Isso não é possivel do jeito que foi descrito. Logo vamos fazer atraves de keywords. 
+
+                   cadastro de pessoa
+                   for {pessoas}  in  joao  ramos  marcos
+"keyourd"->            imprime os nomes das pessoas  {pessoas}
+                   END
+      
+Para fazer outro for chamando os resultado acima vamos chamar a keyword criada "imprime os nomes das pessoas" 
+
+				imprime os nome das pessoas
+				[Arguments]  ${pessoas}
+				For {tarefas}  in lavar  passar  limpar
+					log   tarefa  {pessoas}  vai  {tarefas}
+				END
+
+Então para cada for de pessoas, vamos chamar a keyword imprime os nome das pessoas e fazer um novo loppin em outro for para passar as tarefas dessas pessoas
+
+*** Settings ***
+
+*** Test Cases ***
+Teste de FOR aninhado
+    cadastro de pessoa (FOR aninhado)
+
+
+*** Keywords ***
+cadastro de pessoa (FOR aninhado)
+    FOR  ${pessoas}    IN    JOAO    RAMOS    MARCOS
+       Imprime os nome das pessoas    ${pessoas}
+    END
+
+Imprime os nome das pessoas
+    [Arguments]    ${pessoas}
+    FOR      ${tarefas}  IN   lavar    passar    limpar
+       Log    O: ${pessoas} - vai: ${tarefas}
+    END
+
+
+*******Usando FOR com varias listas ou variaveis
+
+Nesse caso o exemplo de for seria para varias listas ou variavies onde vamos percorrer com um for essas listas
+Esse resultado ficaria
+O marcos é cordernador de sistema
+O felipe é coRdernador de projetos
+O medice é cordenador de MIS
+
+Criar lista de pessoas cargos e setor
+    FOR    ${index}    ${pessoa}    ${cargo}    ${setor}    IN
+    ...    1    marcos    cordenador    sistema
+    ...    2    felipe    cordenador    projetos
+    ...    3    medice    cordenador    MIS
+        Log    Chamada ${index}:\nO: ${pessoa}\nÉ: ${cargo}\nNo setor de: ${setor}
+    END

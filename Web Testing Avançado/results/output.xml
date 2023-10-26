@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.0 on win32)" generated="20231026 15:11:13.443" rpa="false" schemaversion="4">
+<suite id="s1" name="TestSitePractice" source="C:\Users\jotha.joao\Desktop\robot\robot avancado\Web Testing Avançado\SuiteSiteTestePracticePO\tests\TestSitePractice.robot">
+<test id="s1-t1" name="Caso de Teste com PO 01: Remover Produtos do Carrinho" line="11">
+<kw name="Abrir navegador" library="Resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231026 15:11:13.591" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg timestamp="20231026 15:11:13.602" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.602" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20231026 15:11:13.590" endtime="20231026 15:11:13.604"/>
+</kw>
+<status status="FAIL" starttime="20231026 15:11:13.590" endtime="20231026 15:11:13.604"/>
+</kw>
+<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231026 15:11:13.605" endtime="20231026 15:11:13.605"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header"]//*[@class="login"][contains(text(),"Sign in")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.606" level="INFO">Clicking element 'xpath=//*[@id="header"]//*[@class="login"][contains(text(),"Sign in")]'.</msg>
+<msg timestamp="20231026 15:11:13.606" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.606" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.605" endtime="20231026 15:11:13.607"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=email_create</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231026 15:11:13.608" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.608" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.607" endtime="20231026 15:11:13.610"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${EMAIL}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20231026 15:11:13.610" level="INFO">${EMAIL} = xiTTzinz</msg>
+<status status="PASS" starttime="20231026 15:11:13.610" endtime="20231026 15:11:13.611"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email_create</arg>
+<arg>${EMAIL}@testerobot.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.611" level="INFO">Typing text 'xiTTzinz@testerobot.com' into text field 'id=email_create'.</msg>
+<msg timestamp="20231026 15:11:13.611" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.611" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.611" endtime="20231026 15:11:13.611"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=SubmitCreate</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.612" level="INFO">Clicking button 'id=SubmitCreate'.</msg>
+<msg timestamp="20231026 15:11:13.612" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.612" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.611" endtime="20231026 15:11:13.612"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="account-creation_form"]//h3[contains(text(),"Your personal information")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231026 15:11:13.613" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.613" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.612" endtime="20231026 15:11:13.613"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=id_gender2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.613" level="INFO">Clicking element 'id=id_gender2'.</msg>
+<msg timestamp="20231026 15:11:13.613" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.614" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.613" endtime="20231026 15:11:13.614"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=customer_firstname</arg>
+<arg>May</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.615" level="INFO">Typing text 'May' into text field 'id=customer_firstname'.</msg>
+<msg timestamp="20231026 15:11:13.615" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.615" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.614" endtime="20231026 15:11:13.615"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=customer_lastname</arg>
+<arg>Fernandes</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.615" level="INFO">Typing text 'Fernandes' into text field 'id=customer_lastname'.</msg>
+<msg timestamp="20231026 15:11:13.615" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.615" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.615" endtime="20231026 15:11:13.615"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=passwd</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.616" level="INFO">Typing text '123456' into text field 'id=passwd'.</msg>
+<msg timestamp="20231026 15:11:13.616" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.616" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.615" endtime="20231026 15:11:13.616"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=address1</arg>
+<arg>Rua Framework, Bairro Robot</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.616" level="INFO">Typing text 'Rua Framework, Bairro Robot' into text field 'id=address1'.</msg>
+<msg timestamp="20231026 15:11:13.616" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.617" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.616" endtime="20231026 15:11:13.617"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=city</arg>
+<arg>Floripa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.617" level="INFO">Typing text 'Floripa' into text field 'id=city'.</msg>
+<msg timestamp="20231026 15:11:13.617" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.617" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.617" endtime="20231026 15:11:13.617"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>id=id_state</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.618" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.618" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.618" endtime="20231026 15:11:13.618"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${BROWSER}'=='firefox'</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>id=id_state</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231026 15:11:13.618" endtime="20231026 15:11:13.618"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>id=id_state</arg>
+<arg>9</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20231026 15:11:13.619" level="INFO">Selecting options from selection list 'id=id_state' by index 9.</msg>
+<msg timestamp="20231026 15:11:13.619" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.619" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.618" endtime="20231026 15:11:13.619"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=postcode</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.620" level="INFO">Typing text '12345' into text field 'id=postcode'.</msg>
+<msg timestamp="20231026 15:11:13.620" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.620" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.619" endtime="20231026 15:11:13.620"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=phone_mobile</arg>
+<arg>99988877</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.620" level="INFO">Typing text '99988877' into text field 'id=phone_mobile'.</msg>
+<msg timestamp="20231026 15:11:13.620" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.620" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.620" endtime="20231026 15:11:13.620"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submitAccount</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231026 15:11:13.621" level="INFO">Clicking button 'submitAccount'.</msg>
+<msg timestamp="20231026 15:11:13.621" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231026 15:11:13.621" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231026 15:11:13.621" endtime="20231026 15:11:13.622"/>
+</kw>
+<status status="FAIL" starttime="20231026 15:11:13.604" endtime="20231026 15:11:13.622">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.
+
+6) No browser is open.
+
+7) No browser is open.
+
+8) No browser is open.
+
+9) No browser is open.
+
+10) No browser is open.
+
+11) No browser is open.
+
+12) No browser is open.
+
+13) No browser is open.
+
+14) No browser is open.
+
+15) No browser is open.
+
+16) No browser is open.</status>
+</kw>
+<status status="FAIL" starttime="20231026 15:11:13.589" endtime="20231026 15:11:13.623">Setup failed:
+WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+
+Also teardown failed:
+Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.
+
+3) No browser is open.
+
+4) No browser is open.
+
+5) No browser is open.
+
+6) No browser is open.
+
+7) No browser is open.
+
+8) No browser is open.
+
+9) No browser is open.
+
+10) No browser is open.
+
+11) No browser is open.
+
+12) No browser is open.
+
+13) No browser is open.
+
+14) No browser is open.
+
+15) No browser is open.
+
+16) No browser is open.</status>
+</test>
+<status status="FAIL" starttime="20231026 15:11:13.443" endtime="20231026 15:11:13.628"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestSitePractice">TestSitePractice</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

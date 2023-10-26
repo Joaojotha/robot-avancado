@@ -1,0 +1,33 @@
+Controle avançados da Builnt
+
+controle de teardowns
+
+qual é a forma de um teste falhar?
+nesse caso se fizemos uma conferencia qualquer e é falha
+exemplo
+
+esse keyword va falhar 
+joao == ramos?
+não!
+
+então usamos uma condição que só vai passar se joao == joao
+
+Sould Be True joao == ramos
+
+outro exemplo de sucesso
+
+essa keyword vai passar
+
+Sould Be True joao == joao
+
+exemplos de keyword que fara o teste passar e não executar a keyword abaixo
+    Pass Execution      message=Estou forçando meu teste a passar com sucesso!
+
+exemplos de teste que forcamos a ter uma falha, usando uma keyword
+	Fail                msg=Estou forçando meu teste a falhar!
+
+exemplos de usando um if dentro de uma logica onde eu espero um resultado aconteca, junto a isso um status desse resultado podendo ser Pass ou Fail
+   ${STATUS}   Run Keyword And Return Status   Should Be True    "May" == "May" (esse resuultado should be true e o arguento may == may são iguais. logo ele vai ser true, e o status desse caso vai se true)
+   Log  ${STATUS}
+   Pass Execution If    ${STATUS}    message=May é igual a May, então passou!!
+

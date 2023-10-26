@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.0 on win32)" generated="20230718 10:26:00.569" rpa="false" schemaversion="4">
+<suite id="s1" name="For Imprime Pessoa" source="C:\robotHcosta\robot avancado\for_imprime_pessoa.robot">
+<test id="s1-t1" name="Teste de FOR aninhado" line="4">
+<kw name="cadastro de pessoa (FOR aninhado)">
+<for flavor="IN">
+<var>${pessoas}</var>
+<value>JOAO</value>
+<value>RAMOS</value>
+<value>MARCOS</value>
+<iter>
+<var name="${pessoas}">JOAO</var>
+<kw name="Imprime os nome das pessoas">
+<arg>${pessoas}</arg>
+<for flavor="IN">
+<var>${tarefas}</var>
+<value>lavar</value>
+<value>passar</value>
+<value>limpar</value>
+<iter>
+<var name="${tarefas}">lavar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.591" level="INFO">O: JOAO - vai: lavar</msg>
+<status status="PASS" starttime="20230718 10:26:00.591" endtime="20230718 10:26:00.591"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.591" endtime="20230718 10:26:00.591"/>
+</iter>
+<iter>
+<var name="${tarefas}">passar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.592" level="INFO">O: JOAO - vai: passar</msg>
+<status status="PASS" starttime="20230718 10:26:00.592" endtime="20230718 10:26:00.592"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.591" endtime="20230718 10:26:00.592"/>
+</iter>
+<iter>
+<var name="${tarefas}">limpar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.592" level="INFO">O: JOAO - vai: limpar</msg>
+<status status="PASS" starttime="20230718 10:26:00.592" endtime="20230718 10:26:00.592"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.592" endtime="20230718 10:26:00.592"/>
+</iter>
+<status status="PASS" starttime="20230718 10:26:00.591" endtime="20230718 10:26:00.592"/>
+</for>
+<status status="PASS" starttime="20230718 10:26:00.591" endtime="20230718 10:26:00.592"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.591" endtime="20230718 10:26:00.592"/>
+</iter>
+<iter>
+<var name="${pessoas}">RAMOS</var>
+<kw name="Imprime os nome das pessoas">
+<arg>${pessoas}</arg>
+<for flavor="IN">
+<var>${tarefas}</var>
+<value>lavar</value>
+<value>passar</value>
+<value>limpar</value>
+<iter>
+<var name="${tarefas}">lavar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.593" level="INFO">O: RAMOS - vai: lavar</msg>
+<status status="PASS" starttime="20230718 10:26:00.592" endtime="20230718 10:26:00.593"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.592" endtime="20230718 10:26:00.593"/>
+</iter>
+<iter>
+<var name="${tarefas}">passar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.593" level="INFO">O: RAMOS - vai: passar</msg>
+<status status="PASS" starttime="20230718 10:26:00.593" endtime="20230718 10:26:00.593"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.593" endtime="20230718 10:26:00.593"/>
+</iter>
+<iter>
+<var name="${tarefas}">limpar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.593" level="INFO">O: RAMOS - vai: limpar</msg>
+<status status="PASS" starttime="20230718 10:26:00.593" endtime="20230718 10:26:00.593"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.593" endtime="20230718 10:26:00.593"/>
+</iter>
+<status status="PASS" starttime="20230718 10:26:00.592" endtime="20230718 10:26:00.593"/>
+</for>
+<status status="PASS" starttime="20230718 10:26:00.592" endtime="20230718 10:26:00.593"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.592" endtime="20230718 10:26:00.593"/>
+</iter>
+<iter>
+<var name="${pessoas}">MARCOS</var>
+<kw name="Imprime os nome das pessoas">
+<arg>${pessoas}</arg>
+<for flavor="IN">
+<var>${tarefas}</var>
+<value>lavar</value>
+<value>passar</value>
+<value>limpar</value>
+<iter>
+<var name="${tarefas}">lavar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.594" level="INFO">O: MARCOS - vai: lavar</msg>
+<status status="PASS" starttime="20230718 10:26:00.594" endtime="20230718 10:26:00.594"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.594" endtime="20230718 10:26:00.594"/>
+</iter>
+<iter>
+<var name="${tarefas}">passar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.594" level="INFO">O: MARCOS - vai: passar</msg>
+<status status="PASS" starttime="20230718 10:26:00.594" endtime="20230718 10:26:00.594"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.594" endtime="20230718 10:26:00.594"/>
+</iter>
+<iter>
+<var name="${tarefas}">limpar</var>
+<kw name="Log" library="BuiltIn">
+<arg>O: ${pessoas} - vai: ${tarefas}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230718 10:26:00.595" level="INFO">O: MARCOS - vai: limpar</msg>
+<status status="PASS" starttime="20230718 10:26:00.595" endtime="20230718 10:26:00.595"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.594" endtime="20230718 10:26:00.595"/>
+</iter>
+<status status="PASS" starttime="20230718 10:26:00.594" endtime="20230718 10:26:00.595"/>
+</for>
+<status status="PASS" starttime="20230718 10:26:00.593" endtime="20230718 10:26:00.595"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.593" endtime="20230718 10:26:00.595"/>
+</iter>
+<status status="PASS" starttime="20230718 10:26:00.591" endtime="20230718 10:26:00.595"/>
+</for>
+<status status="PASS" starttime="20230718 10:26:00.589" endtime="20230718 10:26:00.595"/>
+</kw>
+<status status="PASS" starttime="20230718 10:26:00.589" endtime="20230718 10:26:00.595"/>
+</test>
+<status status="PASS" starttime="20230718 10:26:00.569" endtime="20230718 10:26:00.599"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="For Imprime Pessoa">For Imprime Pessoa</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

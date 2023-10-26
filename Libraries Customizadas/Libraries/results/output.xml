@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.0 on win32)" generated="20231026 12:07:03.693" rpa="false" schemaversion="4">
+<suite id="s1" name="minhaLibraries" source="C:\Users\jotha.joao\Desktop\robot\robot avancado\Libraries Customizadas\Libraries\minhaLibraries.robot">
+<test id="s1-t1" name="Exemplo de Uso" line="5">
+<kw name="Add Numbers">
+<var>${soma}</var>
+<arg>10</arg>
+<arg>5</arg>
+<msg timestamp="20231026 12:07:03.711" level="FAIL">No keyword with name 'Add Numbers' found.</msg>
+<status status="FAIL" starttime="20231026 12:07:03.711" endtime="20231026 12:07:03.711"/>
+</kw>
+<kw name="Subtract Numbers">
+<var>${subtracao}</var>
+<arg>20</arg>
+<arg>7</arg>
+<status status="NOT RUN" starttime="20231026 12:07:03.713" endtime="20231026 12:07:03.713"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${soma}</arg>
+<arg>15</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" starttime="20231026 12:07:03.713" endtime="20231026 12:07:03.713"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${subtracao}</arg>
+<arg>13</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" starttime="20231026 12:07:03.714" endtime="20231026 12:07:03.714"/>
+</kw>
+<status status="FAIL" starttime="20231026 12:07:03.710" endtime="20231026 12:07:03.714">No keyword with name 'Add Numbers' found.</status>
+</test>
+<status status="FAIL" starttime="20231026 12:07:03.694" endtime="20231026 12:07:03.716"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="minhaLibraries">minhaLibraries</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231026 12:07:03.708" level="ERROR">Error in file 'C:\Users\jotha.joao\Desktop\robot\robot avancado\Libraries Customizadas\Libraries\minhaLibraries.robot' on line 2: Library 'Libraries\SimpleMatchLibrary\SimpleMathLibrary.py' does not exist.</msg>
+</errors>
+</robot>

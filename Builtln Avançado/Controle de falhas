@@ -1,0 +1,26 @@
+Controle - lidando com falhas
+
+primeira exemplo de keyword - Run keyword and Ignore Error
+Essa keyword vai ligar com um erro previsto e ignoralo exemplo Joao == Ramos? Não porém ela vai continuar seu trafejo foi estamos ignorando essa falha
+    
+    Run Keyword And Ignore Error    Should Be True    "Ramos" == "João"
+    Log   Continuo a execução!!
+
+proximo esse de keyword de controle de falhar, é a Run Keyword And Expect Error que seria uma keyword de controle q eu espero que um erro previsto seja apontado no meu teste logo eu faço um teste onde eu aguardo o erro e confirmo se esse erro aconteceu atras de outra keyword Should Be True(eu espero que seja verdadeiro) exemplo: "Ramos" == "João"' should be true(ramos e joao é verdadeiro) logo o meu erro esperado aconteceu. Se por acaso der outro erro alem do que eu espero ai sim o meu teste falhou de verdade, pois não espero outra coisa alem do que eu setei na keyword.
+
+
+Essa keyword vai falhar, mas é uma falha que deve acontecer para meu teste ser considerado OK!
+    Run Keyword And Expect Error    '"ramos" == "João"' should be true.       Should Be True    "Ramos" == "João"
+
+proxima keyowrd seria  Run Keyword And Continue On Failure éla é uma keyword de controle de falhas, que o teste vai falhar, porém el vai continuar a processar as proximas keywords e testes. exemplo 
+    Run Keyword And Continue On Failure  Should Be True(iSSO é verdadeiro?) "May" == "João" (resultado não, porém vou deixar o teste falhhar e conutinuar os  axecuação)
+    Log   Continuo a execução 1!!
+    Log   Continuo a execução 2!!
+    Log   Continuo a execução 3!!
+
+
+ultimo exemplo de keyword de controle, é a Run keyword IF  Fatal ERROR então esse caso vamos encerrar os teste caso der um fatal error nos testes, como seria, seraria um varivel exemplo ${STOP} e atribuimos ela para PARAR, se minha varivel for PARRAR eu dou um fatal error e paro tudo.
+
+Essa keyword encerra a execução da suíte!
+    [Arguments]     ${STOP}
+    Run Keyword if  "${STOP}"=="Para"   Fatal Error   msg=Para tudo, não adianta continuar com essa falha aqui!!!
