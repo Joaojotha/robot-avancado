@@ -24,18 +24,19 @@ Exemplo: Postando com body template
 #### ----- Recentemente a API do GitHub mudou a forma de autenticação, crie o seu TOKEN e use no teste
 #### ----- conforme nova keyword abaixo:
 Conectar com autenticação por token na API do GitHub
-    ${HEADERS}          Create Dictionary    Authorization=Bearer ${MY_GITHUB_TOKEN}
-    Create Session      alias=mygithubAuth   url=${GITHUB_HOST}     headers=${HEADERS}     disable_warnings=True
+    ${HEADERS}    Create Dictionary    Authorization=Bearer ${MY_GITHUB_TOKEN}
+    Create Session    alias=Giteste    url=${GITHUB_HOST}    headers=${HEADERS}    disable_warnings=True
 
 Postar uma nova issue com label "${LABEL}"
     ${BODY}         Format String    ${CURDIR}/data/input/post_issue.json
     ...             user_git=${MY_GITHUB_USER}
     ...             label=${LABEL}
     Log             Meu Body ficou:\n${BODY}
-    ${RESPONSE}     Post Request    alias=mygithubAuth    uri=${ISSUES_URI}   data=${BODY}
+    ${RESPONSE}     Post Request    alias=Giteste    uri=${ISSUES_URI}   data=${BODY}
     Confere sucesso na requisição   ${RESPONSE}
 
 Confere sucesso na requisição
     [Arguments]      ${RESPONSE}
-    Should Be True   '${RESPONSE.status_code}'=='200' or '${RESPONSE.status_code}'=='201'
-    ...  msg=Erro na requisição! Verifique: ${RESPONSE}
+    ${STATUS.200}    Run Keyword And Return Status    Should Be Byte String    ${RESPONSE.status_code} 200
+    ${STATUS.201}    Run Keyword And Return Status    Should Be Byte String    ${RESPONSE.status_code} 201
+    Run Keyword If     '${STATUS.200}'!='True' and '${STATUS.201}'!='True'    Fail    Erro na requisição! Verifique: ${RESPONSE}

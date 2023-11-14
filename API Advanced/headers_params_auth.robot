@@ -25,12 +25,15 @@ Exemplo: Usando parâmetros
 Exemplo: Usando headers
     # Conectar com autenticação básica na API do GitHub
     Conectar com autenticação por token na API do GitHub
-    Enviar a reação "eyes" para a issue "2"
+    Enviar a reação "confused" para a issue "2"
 
 Exemplo: Comentar em um issue
     Conectar com autenticação por token na API do GitHub
     Cadastrar comentário na issue "2"
 
+Exercício 02: Consultar comentários
+    Conectar com autenticação por token na API do GitHub
+    Consultar comentários das issues ordenados por "updated" e "desc"
 
 *** Keywords ***
 
@@ -65,10 +68,17 @@ Enviar a reação "${REACAO}" para a issue "${ISSUE_NUMERO}"
     Confere sucesso na requisição    ${ENVIA_DADOS}    
 
 
-Cadastrar comentário na issue "${ISSUE_12}"
-      ${COMENTARIO}    POST On Session   alias=testeGit    url=${ISSUE_URL}/${ISSUE_12}/comments
-      ...  data={"body": "Comentário cadastrado via Robot Framework!"}
+Cadastrar comentário na issue "${ISSUE}"
+      ${COMENTARIO}    Post Request   alias=testeGit    uri=${ISSUE_URL}/${ISSUE}/comments
+      ...  data={"body": "Comentário cadastrado via Robot Framework!"}    
       Confere sucesso na requisição    ${COMENTARIO}
+
+
+Consultar comentários das issues ordenados por "${SORT}" e "${DIRECTION}"
+      ${LISTA}    Create Dictionary    sort=${SORT}    direction=${DIRECTION}
+      ${LISTAR}   GET On Session    alias=testeGit     url=${ISSUE_URL}    headers=${LISTA}
+      Log         Meus comentarios: ${LISTAR.json()}
+      Confere sucesso na requisição    ${LISTAR}
 
 
 Confere sucesso na requisição

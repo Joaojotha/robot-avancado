@@ -1,0 +1,40 @@
+{
+    "pessoa": {
+        "primeiro": {
+            "primeiro_nome": "joao",
+            "nomes_do_meio": "marcos",
+            "ultimo_nome": "jotha",
+            "apelido": "jotinha"
+        },
+        "segundo": {
+            "primeiro_nome": "joao",
+            "nomes_do_meio": "otario",
+            "ultimo_nome": "ramos",
+            "apelido": "ramitos"
+        },
+        "hcosta": {
+            "cargos": [
+                {
+                    "setor": "Sistemas",
+                    "cargo": "analista de testes"
+                },
+                {
+                    "setor": "Sistemas",
+                    "cargo": "Desenvolvedor"
+                }
+            ],
+            "linguagens": {
+                "sistema": [
+                    "PHP",
+                    "Javascript",
+                    "Html"
+                ],
+                "inovacao": [
+                    "Pyhton",
+                    "Flask",
+                    "Javascript"
+                ]
+            }
+        }
+    }
+}
